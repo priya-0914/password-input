@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Input</title>
+</head>
+<body>
+    <form>
+        <label for="password">Enter Password:</label>
+        <input type="password" id="password" name="password">
+        <input type="checkbox" id="togglePassword"> Show Password
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+
+        togglePassword.addEventListener("change", function () {
+            passwordInput.type = this.checked ? "text" : "password";
+        });
+    </script>
+</body>
+</html>
